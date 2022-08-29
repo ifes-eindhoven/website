@@ -1,4 +1,5 @@
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import fs from "fs";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
@@ -66,6 +67,9 @@ export default function configuration(env: any, argv: any) {
                 filename: "css/[name].css",
             }),
         ],
+        optimization: {
+            minimizer: [`...`, new CssMinimizerPlugin()],
+        }
     }];
     return config;
 }
