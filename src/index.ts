@@ -4,7 +4,7 @@ import 'owl.carousel';
 import * as jQuery from 'jquery';
 
 jQuery(document).ready(function($) {      
-  var owl = $('.carousel-fade-transition');
+  let owl = $('.carousel-fade-transition');
   owl.owlCarousel({
     nav: true,
     dots: true,
@@ -15,15 +15,5 @@ jQuery(document).ready(function($) {
     animateOut: 'fadeOut',
     autoplayTimeout: 4000
   }); 
-  
-  // Sticky Nav Bar
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 20){  
-        $('.sticky').addClass("fixed");
-    }
-    else{
-        $('.sticky').removeClass("fixed");
-    }
-  });   
 });
 

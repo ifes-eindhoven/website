@@ -10,11 +10,11 @@ import CopyPlugin from "copy-webpack-plugin";
 
 const srcFiles: string = path.join(__dirname, "src");
 const distFiles: string = path.join(__dirname, "dist");
-const HTMLFiles: path.ParsedPath[] = fs.readdirSync(srcFiles).filter(file => file.endsWith(".html")).map(path.parse);
+const HTMLFiles: path.ParsedPath[] = fs.readdirSync(srcFiles).filter(file => file.endsWith(".hbs")).map(path.parse);
 const HTMLPlugins: HtmlWebpackPlugin[] = HTMLFiles.map(file => new HtmlWebpackPlugin({
     template: path.join(srcFiles, file.base),
     inject: true,
-    filename: file.base,
+    filename: `${file.name}.html`,
     chunks: ["global", file.name],
 }));
 
@@ -49,6 +49,10 @@ export default function configuration(env: any, argv: any) {
                         filename: 'fonts/[name].[ext]',
                     }
                 },
+                {
+                    test: /\.hbs$/,
+                    loader: "handlebars-loader",
+                }
             ],
         },
         plugins: [
@@ -69,6 +73,7 @@ export default function configuration(env: any, argv: any) {
         ],
         optimization: {
             minimizer: [`...`, new CssMinimizerPlugin()],
+            runtimeChunk: "single",
         }
     }];
     return config;
