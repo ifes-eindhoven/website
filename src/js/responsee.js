@@ -1,3 +1,5 @@
+import * as jQuery from 'jquery';
+
 /*
  * Responsee JS - v7 - 2020-09-30
  * https://www.myresponsee.com

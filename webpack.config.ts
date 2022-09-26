@@ -7,6 +7,7 @@ import path from "path";
 import webpack from "webpack";
 import webpackDevServer from "webpack-dev-server";
 import CopyPlugin from "copy-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const srcFiles: string = path.join(__dirname, "src");
 const distFiles: string = path.join(__dirname, "dist");
@@ -31,6 +32,9 @@ export default function configuration(env: any, argv: any) {
         },
         devServer: {
             port: 8080,
+        },
+        resolve: {
+            extensions: [".ts", ".js"],
         },
         module: {
             rules: [
@@ -70,10 +74,14 @@ export default function configuration(env: any, argv: any) {
             new MiniCssExtractPlugin({
                 filename: "css/[name].css",
             }),
+            new BundleAnalyzerPlugin()
         ],
         optimization: {
             minimizer: [`...`, new CssMinimizerPlugin()],
             runtimeChunk: "single",
+            splitChunks: {
+                chunks: "all"
+            }
         }
     }];
     return config;

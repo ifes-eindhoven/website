@@ -1,10 +1,14 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-import * as jQuery from 'jquery';
+// import './js/responsee';
 
-jQuery(document).ready(function($) {      
-  let owl = $('.carousel-fade-transition');
+import * as jQuery from 'jquery';
+import ready from './js/ready';
+
+
+ready(() => {      
+  let owl = jQuery('.carousel-fade-transition');
   owl.owlCarousel({
     nav: true,
     dots: true,

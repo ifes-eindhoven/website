@@ -4,18 +4,17 @@ import "./css/responsee.css";
 import "./css/template-style.css";
 
 import "./js/responsee";
+import ready from './js/ready';
 
-import * as jQuery from 'jquery';
-
-jQuery(document).ready(function ($) {
-  // Sticky Nav Bar
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 20) {
-      $('.sticky').addClass("fixed");
-    }
-    else {
-      $('.sticky').removeClass("fixed");
+ready(() => {
+  window.addEventListener('scroll', () => {
+    let bar = document.querySelector(".sticky");
+    if (bar === null) return;
+    if (window.scrollY > 100) {
+      bar.classList.add("fixed");
+    } else {
+      bar.classList.remove("fixed");
     }
   });
-});
+})
 
