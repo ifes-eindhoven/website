@@ -67,39 +67,39 @@ h6.headline, .h6.headline {
   font-size: 2rem;
   letter-spacing: -1.3px;
 }
-.text-size-12, .text-l-size-12 {
+.text-size-12, .text-xl-size-12 {
   font-size: 12px !important;
   line-height: 1.4;
 }
-.text-size-16, .text-l-size-16 {
+.text-size-16, .text-xl-size-16 {
   font-size: 16px !important;
   line-height: 1.4;
 }
-.text-size-20, .text-l-size-20 {
+.text-size-20, .text-xl-size-20 {
   font-size: 20px !important;
   line-height: 1.4;
 }
-.text-size-25, .text-l-size-25 {
+.text-size-25, .text-xl-size-25 {
   font-size: 25px !important;
   line-height: 1.4;
 }
-.text-size-30, .text-l-size-30 {
+.text-size-30, .text-xl-size-30 {
   font-size: 30px !important;
   line-height: 1.4;
 }
-.text-size-40, .text-l-size-40 {
+.text-size-40, .text-xl-size-40 {
   font-size: 40px !important;
   line-height: 1.4;
 }
-.text-size-50, .text-l-size-50 {
+.text-size-50, .text-xl-size-50 {
   font-size: 50px !important;
   line-height: 1.4;
 }
-.text-size-60, .text-l-size-60 {
+.text-size-60, .text-xl-size-60 {
   font-size: 60px !important;
   line-height: 1.4;
 }
-.text-size-70, .text-l-size-70 {
+.text-size-70, .text-xl-size-70 {
   font-size: 70px !important;
   line-height: 1.4;
 } 
@@ -1237,10 +1237,53 @@ p.form-success {
   .size-1140 .line.content-center-vertical {
       padding: 0 2rem;
   }
+
+  .text-l-size-12 {
+    font-size: 12px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-16 {
+    font-size: 16px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-20 {
+    font-size: 20px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-25 {
+    font-size: 25px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-30 {
+    font-size: 30px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-40 {
+    font-size: 40px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-50 {
+    font-size: 50px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-60 {
+    font-size: 60px !important;
+    line-height: 1.4;
+  }
+  .text-l-size-70 {
+    font-size: 70px !important;
+    line-height: 1.4;
+  } 
 }
 
 /* -768px version */
 @media screen and (max-width:768px) {
+    .fixed-overlay {
+        margin-top: 1em;
+        position: relative !important;
+        top: 0 !important;
+        height: auto !important;
+    }
     .top-nav .right {
       float: none;
     }
@@ -1926,7 +1969,7 @@ h1 {
 	font-weight: bold;
 }
 
-.fixed_overlay {
+.fixed-overlay {
 	position: absolute;
   top: 20vh;
   left: 0px;
