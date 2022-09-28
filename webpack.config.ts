@@ -31,20 +31,20 @@ export default function configuration(env: any, argv: any) {
             path: distFiles,
         },
         devServer: {
+            static: {
+                directory: distFiles,
+            },
             port: 8080,
         },
         resolve: {
             extensions: [".ts", ".js"],
         },
+        watch: true,
         module: {
             rules: [
                 {
                     test: /\.css$/,
-                    use: [argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader", "css-loader"],
-                },
-                {
-                    test: /\.s[ac]ss$/i,
-                    use: [argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "sass-loader"],
+                    use: [argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "postcss-loader"],
                 },
                 {
                     test: /\.(woff2?|ttf|otf|eot|svg)$/,
