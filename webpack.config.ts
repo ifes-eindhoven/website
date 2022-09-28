@@ -35,6 +35,8 @@ export default function configuration(env: any, argv: any) {
                 directory: distFiles,
             },
             port: 8080,
+            hot: false,
+            liveReload: true,
         },
         resolve: {
             extensions: [".ts", ".js"],
@@ -45,6 +47,10 @@ export default function configuration(env: any, argv: any) {
                 {
                     test: /\.css$/,
                     use: [argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "postcss-loader"],
+                },
+                {
+                    test: /\.s[ac]ss$/,
+                    use: [argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "sass-loader"],
                 },
                 {
                     test: /\.(woff2?|ttf|otf|eot|svg)$/,
@@ -67,10 +73,10 @@ export default function configuration(env: any, argv: any) {
                     { from: "./src/img", to: "./img" },
                 ]
             }),
-            new webpack.ProvidePlugin({
-                "jQuery": "jquery",
-                "window.jQuery": "jquery",
-            }),
+            // new webpack.ProvidePlugin({
+            //     "jQuery": "jquery",
+            //     "window.jQuery": "jquery",
+            // }),
             new MiniCssExtractPlugin({
                 filename: "css/[name].css",
             }),
