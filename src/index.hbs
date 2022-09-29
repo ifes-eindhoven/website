@@ -11,158 +11,132 @@
   <!-- HEADER -->
   {{> components/header}}
 
-  <main role="main">
-    <header>
-      <!-- This is for the text overlay that goes over the image carousel -->
-      <div>
-        <div>
-          <img src="img/header-host.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host1.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host2.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host3.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host4.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host5.avif" alt="" loading="lazy">
-        </div>
-        <div>
-          <img src="img/header-host6.avif" alt="" loading="lazy">
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <div></div>
-          <div>
-            <h1>
-              HOST
-              Eindhoven</h1>
-          </div>
-          <div></div>
-
-          <div></div>
-          <div>
-            <p>International Christian
-              Student
-              Community</p>
-          </div>
-          <div></div>
-
-          <div>
-            <a>Get in Touch</a>
+  <!-- This is for the text overlay that goes over the image carousel -->
+  <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="overlay d-flex justify-content-center">
+        <div class="card text-bg-dark">
+          <div class="card-body text-center">
+            <h1>HOST Eindhoven</h1>
+            <p>International Christian Student Community</p>
+            <a class="btn btn-dark" href="#contact">Get in Touch</a>
           </div>
         </div>
       </div>
-    </header>
+      <div class="carousel-item active">
+        <img src="img/header-host.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host1.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host2.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host3.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host4.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host5.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header-host6.avif" alt="" class="d-block w-100" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
 
     <!-- Section 1 -->
-    <section>
-      <div>
-        <div>
-          <h2 id="about">About Us</h2>
-          <hr>
-        </div>
+    <div class="mt-5 row text-center">
+      <h2 id="about">About Us</h2>
+      <hr class="ruler">
+    </div>
+    <div class="row">
+      <div class="text-primary text-end fs-3 col-md-3">
+        <p>
+          We
+          Are<br> HOST<br>
+          Eindhoven</p>
       </div>
-      <div>
-        <div>
-          <p>
-            We
-            Are<br> HOST<br>
-            Eindhoven</p>
-        </div>
-        <div>
-          <p>HOST is a community for international students that
-            aims to help international students to feel at home in Eindhoven. At HOST you can expect hospitality, to
-            build friendships, and to be encouraged to meet God. We organize various formal and informal events,
-            focussed on helping Christian international students grow in their faith and share experiences. These
-            events also include activities that are a lot of fun, and involve cultural exchange. However, you don’t
-            have to be a Christian to come along; we welcome all students regardless of their cultural background or
-            religion!</p><br />
+      <div class="col">
+        <p>HOST is a community for international students that
+          aims to help international students to feel at home in Eindhoven. At HOST you can expect hospitality, to
+          build friendships, and to be encouraged to meet God. We organize various formal and informal events,
+          focussed on helping Christian international students grow in their faith and share experiences. These
+          events also include activities that are a lot of fun, and involve cultural exchange. However, you don’t
+          have to be a Christian to come along; we welcome all students regardless of their cultural background or
+          religion!</p><br />
 
-          <p>HOST Eindhoven is part of IFES (International
-            Fellowship of Evangelical Students), an organization supporting ministries to international students in
-            cities all over the globe, among which 20 cities in the Netherlands. Furthermore, IFES Netherlands
-            organizes a number of activities where you can meet many international students studying in different
-            cities in the Netherlands.</p>
-        </div>
+        <p>HOST Eindhoven is part of IFES (International
+          Fellowship of Evangelical Students), an organization supporting ministries to international students in
+          cities all over the globe, among which 20 cities in the Netherlands. Furthermore, IFES Netherlands
+          organizes a number of activities where you can meet many international students studying in different
+          cities in the Netherlands.</p>
       </div>
-    </section>
+    </div>
 
     <!-- Section 2 -->
-    <section>
-      <div>
-        <div>
-          <h2>Get Involved</h2>
-          <hr>
-        </div>
+    <div class="mt-5 row text-center">
+      <h2>Get Involved</h2>
+      <hr class="ruler">
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <img src="img/header-host.avif" class="w-100">
+        <h3 class="mt-2">Weekly Meetings</h3>
+        <p>Our main meetings are on Friday evenings, when we meet for dinner and a Bible study! Every second week it
+          is at Dommelstraat 6 in Eindhoven city center, and every other week we meet in small groups at various
+          locations in Eindhoven.</p>
+        <a href="get_involved.html#host_meetings">Read more</a>
       </div>
-      <div>
-        <div>
-          <img>
-          <h2>Weekly Meetings</h2>
-          <p>Our main meetings are on Friday evenings, when we meet for dinner and a Bible study! Every second week it
-            is at Dommelstraat 6 in Eindhoven city center, and every other week we meet in small groups at various
-            locations in Eindhoven.</p>
-          <a>Read more</a>
-        </div>
-        <div>
-          <img>
-          <h2>Family Project</h2>
-          <p>Would you like to have regular meetings with a Dutch family over a meal in their home? We match
-            international students up with a host family either individually or in pairs so that you can learn more
-            about Dutch culture in a family setting.</p>
-          <a>Read more</a>
-        </div>
-        <div>
-          <img>
-          <h2>Other Events</h2>
-          <p>Sometimes, we organize other fun and cultural activities such as BBQs or dinners inspired by other
-            nationalities and cultures.</p>
-          <a>Read more</a>
-        </div>
+      <div class="col-md">
+        <img src="img/img-02.avif" class="w-100">
+        <h3 class="mt-2">Family Project</h3>
+        <p>Would you like to have regular meetings with a Dutch family over a meal in their home? We match
+          international students up with a host family either individually or in pairs so that you can learn more
+          about Dutch culture in a family setting.</p>
+        <a href="get_involved.html#family_project">Read more</a>
       </div>
-    </section>
+      <div class="col-md">
+        <img src="img/img-03.avif" class="w-100">
+        <h3 class="mt-2">Other Events</h3>
+        <p>Sometimes, we organize other fun and cultural activities such as BBQs or dinners inspired by other
+          nationalities and cultures.</p>
+        <a href="get_involved.html#other_events">Read more</a>
+      </div>
+    </div>
 
     <!-- Section 3 -->
-    <section>
+    <div class="mt-5 row text-center">
+      <h2>Life in Eindhoven</h2>
+      <hr class="ruler">
+    </div>
+    <div>
       <div>
-        <h2>Life in Eindhoven</h2>
-        <hr>
+        <p>As a Christian international student, finding relevant
+          information about the city you live in can be daunting. Fortunately, we've put together a list of useful
+          resources including international-friendly churches and links for finding accommodation in Eindhoven.</p>
+        <a href="eindhoven.html">Read more</a>
       </div>
-      <div>
-        <div>
-          <p>As a Christian international student, finding relevant
-            information about the city you live in can be daunting. Fortunately, we've put together a list of useful
-            resources including international-friendly churches and links for finding accommodation in Eindhoven.</p>
-          <a>Read more</a>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <!-- Section 4 -->
-    <section>
+    <div class="mt-5 row text-center">
+      <h2 id="events">Current events</h2>
+      <hr class="ruler">
+    </div>
+    <div>
       <div>
-        <h2 id="events">Current events</h2>
-        <hr>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=400&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMadrid&mode=MONTH&showNav=1&showTitle=0&showDate=1&showPrint=0&showTabs=1&showCalendars=0&src=b2s4aGxvbjBkcmo4amRqMG83ZWZnamx1M2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%238E24AA"
+          style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
       </div>
-      <div>
-        <div>
-          <iframe
-            src="https://calendar.google.com/calendar/embed?height=400&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMadrid&mode=MONTH&showNav=1&showTitle=0&showDate=1&showPrint=0&showTabs=1&showCalendars=0&src=b2s4aGxvbjBkcmo4amRqMG83ZWZnamx1M2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%238E24AA"
-            style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
+
 
   <!-- FOOTER -->
   {{> components/footer}}

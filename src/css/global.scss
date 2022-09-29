@@ -1,8 +1,13 @@
-
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import 'bootstrap/scss/functions';
 
 // 2. Include any default variable overrides here
+$dark: #152732;
+$primary: #fecc0c;
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 5;
+$h2-font-size: $font-size-base * 3;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import 'bootstrap/scss/variables';
@@ -13,16 +18,45 @@
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/root';
+@import 'bootstrap/scss/utilities';
 
 // 6. Optionally include any other parts as needed
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
 @import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/carousel';
 @import 'bootstrap/scss/containers';
 @import 'bootstrap/scss/dropdown';
-@import 'bootstrap/scss/helpers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/images';
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar';
-@import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/transitions';
-@import 'bootstrap';
 
+@import 'bootstrap/scss/helpers';
 
+@import 'bootstrap/scss/utilities/api';
+
+// @import 'bootstrap';
+
+.overlay {
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    width: 100%;
+}
+
+.ruler {
+    // @extend .mx-auto;
+    width: 60px;
+    height: 2px;
+    border: 0;
+    background-color: $primary;
+    margin: 20px auto 35px;
+    opacity: 1;
+}
+
+// footer a {
+//     color: $gray-400;
+// }
