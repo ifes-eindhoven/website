@@ -4,10 +4,13 @@
 // 2. Include any default variable overrides here
 $dark: #152732;
 $primary: #fecc0c;
+$secondary: #002633;
 
 $font-size-base: 1rem;
+$headings-font-weight: 370;
+$headings-color: $secondary;
 $h1-font-size: $font-size-base * 5;
-$h2-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2.5;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import 'bootstrap/scss/variables';
@@ -27,7 +30,7 @@ $h2-font-size: $font-size-base * 3;
 @import 'bootstrap/scss/card';
 @import 'bootstrap/scss/carousel';
 @import 'bootstrap/scss/containers';
-@import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/dropdown';
 @import 'bootstrap/scss/grid';
 @import 'bootstrap/scss/images';
 @import 'bootstrap/scss/nav';
@@ -53,10 +56,14 @@ $h2-font-size: $font-size-base * 3;
     height: 2px;
     border: 0;
     background-color: $primary;
-    margin: 20px auto 35px;
+    margin: 20px 0 35px;
     opacity: 1;
 }
 
-// footer a {
-//     color: $gray-400;
-// }
+#eindhoven-info a {
+    color: $gray-600;
+}
+
+#eindhoven-info h6 {
+    font-weight: 700;
+}

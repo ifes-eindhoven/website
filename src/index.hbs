@@ -13,22 +13,22 @@
   {{> components/header}}
 
   <!-- This is for the text overlay that goes over the image carousel -->
-  <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-touch="false" data-bs-pause="false">
     <div class="carousel-inner">
       <div class="overlay d-flex justify-content-center">
         <div class="card text-bg-dark">
           <div class="card-body text-center">
-            <h1>HOST Eindhoven</h1>
+            <h1 class="text-white">HOST Eindhoven</h1>
             <p>International Christian Student Community</p>
             <a class="btn btn-dark" href="#contact">Get in Touch</a>
           </div>
         </div>
       </div>
-      <div class="carousel-item active">
-        <img src="img/header-host.avif" width="100%" alt="HOST evening gathering" class="d-block w-100">
-      </div>
       <div class="carousel-item">
-        <img src="img/header-host1.avif" width="100%" alt="HOST evening gathering" class="d-block w-100" loading="lazy">
+        <img src="img/header-host.avif" width="100%" alt="HOST evening gathering" class="d-block w-100" loading="lazy">
+      </div>
+      <div class="carousel-item active">
+        <img src="img/header-host1.avif" width="100%" alt="HOST evening gathering" class="d-block w-100">
       </div>
       <div class="carousel-item">
         <img src="img/header-host2.avif" width="100%" alt="HOST evening gathering with worship" class="d-block w-100" loading="lazy">
@@ -52,8 +52,8 @@
 
     <!-- Section 1 -->
     <div class="mt-5 row text-center">
-      <h2 id="about">About Us</h2>
-      <hr class="ruler">
+      <h2 style="padding-top: 80px; margin-top: -80px;" id="about">About Us</h2>
+      <hr class="ruler mx-auto">
     </div>
     <div class="row">
       <div class="text-primary text-end fs-3 col-md-3">
@@ -82,7 +82,7 @@
     <!-- Section 2 -->
     <div class="mt-5 row text-center">
       <h2>Get Involved</h2>
-      <hr class="ruler">
+      <hr class="ruler mx-auto">
     </div>
     <div class="row">
       <div class="col-md">
@@ -113,7 +113,7 @@
     <!-- Section 3 -->
     <div class="mt-5 row text-center">
       <h2>Life in Eindhoven</h2>
-      <hr class="ruler">
+      <hr class="ruler mx-auto">
     </div>
     <div>
       <div>
@@ -127,7 +127,7 @@
     <!-- Section 4 -->
     <div class="mt-5 row text-center">
       <h2 id="events">Current events</h2>
-      <hr class="ruler">
+      <hr class="ruler mx-auto">
     </div>
     <div>
       <div>
