@@ -25,7 +25,6 @@ export default function configuration(env: any, argv: any) {
         name: "dev",
         entry: {
             global: "./src/global.ts",
-            index: "./src/index.ts"
         },
         output: {
             path: distFiles,
