@@ -30,7 +30,6 @@ $h2-font-size: $font-size-base * 2.5;
 @import 'bootstrap/scss/card';
 @import 'bootstrap/scss/carousel';
 @import 'bootstrap/scss/containers';
-// @import 'bootstrap/scss/dropdown';
 @import 'bootstrap/scss/grid';
 @import 'bootstrap/scss/images';
 @import 'bootstrap/scss/nav';
@@ -41,13 +40,17 @@ $h2-font-size: $font-size-base * 2.5;
 
 @import 'bootstrap/scss/utilities/api';
 
-// @import 'bootstrap';
-
 .overlay {
-    position: absolute;
-    z-index: 12;
-    top: 30%;
+    @extend .mt-5;
     width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+    .overlay {
+        position: absolute;
+        z-index: 12;
+        top: 30%;
+    }
 }
 
 .ruler {
