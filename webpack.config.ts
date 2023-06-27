@@ -5,13 +5,15 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import webpack from "webpack";
-import webpackDevServer from "webpack-dev-server";
+import _ from "webpack-dev-server";
 import CopyPlugin from "copy-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const srcFiles: string = path.join(__dirname, "src");
 const distFiles: string = path.join(__dirname, "dist");
 const HTMLFiles: path.ParsedPath[] = fs.readdirSync(srcFiles).filter(file => file.endsWith(".hbs")).map(path.parse);
+
+// We deploy a single HTML file for each page
 const HTMLPlugins: HtmlWebpackPlugin[] = HTMLFiles.map(file => new HtmlWebpackPlugin({
     template: path.join(srcFiles, file.base),
     inject: true,
